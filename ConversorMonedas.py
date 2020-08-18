@@ -4,8 +4,6 @@ def conversor(tipode_moneda, cambio_dolares):
     valor_pesos = str(round(valor_pesos, 2))
     print("el valor de "+ valor + "$ americanos" + " en "+ tipode_moneda +" es "+ valor_pesos +" $")
 
-
-
 menu = """
 Bienvenido al conversor de monedas
 
