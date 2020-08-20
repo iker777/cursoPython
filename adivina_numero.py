@@ -30,9 +30,7 @@ def run():
 
         elif numero_usuario < numero_random:
             numero_usuario = int(input("Tu número es más pequeño, vuelve a intentarlo:   "))
-
-        else:
-            print("Felicidades TXO! Has acertado :)")
+    print("Has acertado TXO!")
 
             
 if __name__ == '__main__':
