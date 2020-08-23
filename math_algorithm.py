@@ -9,7 +9,23 @@ def equation():
 
 
 def exhaustive_enumeration(var1, var2, var3, var4):
-    pass
+    x = 0
+    solution = var1 * x**2 + var2 * x + var3
+    cycle = True
+
+    while cycle == True:
+        if solution == var4:
+            break
+            return x
+        
+        elif solution > var4:
+            x = x - 1
+
+        elif solution < var4:
+            x = x + 1
+
+
+    
 
 def approximation(var1, var2, var3, var4):
     pass
@@ -33,17 +49,20 @@ def run():
 
         if option == 1:
             a,b,c,d = equation()
-            exhaustive_enumeration(a,b,c,d)
+            answer = exhaustive_enumeration(a,b,c,d)
+            print(answer)
             break
 
         elif option == 2:
             a,b,c,d = equation()
-            approximation(a,b,c,d)
+            answer = approximation(a,b,c,d)
+            print(answer)
             break
         
         elif option == 3:
             a,b,c,d = equation()
-            binary_search(a,b,c,d)
+            answer = binary_search(a,b,c,d)
+            print(answer)
             break
     
     
