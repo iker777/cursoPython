@@ -17,6 +17,10 @@ def primera_letra(lista_palabras):
 
     return primeras_letras
 
+def run():
+    lista = ['Angelo',5.5, '', 2 , '43952353', 0.35]
+    print('Primeras letras validas son : ' , primera_letra(lista))
 
-lista = ['Angelo',5.5, '', 2 , '43952353', 0.35]
-print('Primeras letras validas son : ' , primera_letra(lista))
+
+if __name__ == '__main__':
+    run()
