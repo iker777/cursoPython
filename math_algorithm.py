@@ -1,3 +1,5 @@
+import bolzano
+
 def equation():
     print("Esta va a ser tu ecuación de tercer grado: Ax^2 + Bx + C = D. Introduce los factores de tu ecuación")
     a = int(input("A: "))
@@ -24,34 +26,6 @@ def exhaustive_enumeration(var1, var2, var3, var4):
             print("No hemos encontrado respuesta con este método, vuelve a intentarlo")
 
 
-def bolzano(var1, var2, var3, var4):
-    var1 = float(var1)
-    var2 = float(var2)
-    var3 = float(var3)
-    var4 = float(var4)
-    fa = -var1
-    b = 100
-    b_old = []
-
-    for i in range(100):
-        fb = var1 * b**2 + var2 * b + var3 - var4
-        is_negative = fa *fb
-        b_old.append(b)
-
-        if is_negative == True:
-            b = ( b_old[i-2] - b ) / 2
-
-        elif is_negative == False:
-            b = ( b_old[i-2] - b ) / 2
-
-        if solution == 0:
-            return x
-
-        elif i == 100:
-            print("No hemos encontrado respuesta con este método, vuelve a intentarlo")
-
-
-
 def binary_search(var1, var2, var3, var4):
     pass
 
@@ -71,25 +45,25 @@ def run():
         if option == 1:
             a,b,c,d = equation()
             answer = exhaustive_enumeration(a,b,c,d)
+            print("La respuesta es: " + str(answer))
 
             if answer != None:
                 break
 
         elif option == 2:
-            a,b,c,d = equation()
-            answer = bolzano(a,b,c,d)
-            if answer != None:
+            a, b, c, d = equation()
+            solution1, solution2 = bolzano.bolzano(a, b, c, d)
+            print("la respuesta de x son --> solución1: " + str(solution1) + "\n                      --> y solución2: " + str(solution2))
+
+            if solution1 != str or solution2 != str:
                 break
         
         elif option == 3:
             a,b,c,d = equation()
-            answer = binary_search(a,b,c,d)
-            if answer != None:
-                break
+            answer = binary_search(a, b, c, d)
 
-    print("La respuesta es: " + str(answer))
-    
-    
+            if answer != None:
+                break  
 
 
 if __name__ == '__main__':

@@ -1,5 +1,5 @@
-import unittest
-import math
+#import unittest
+#import math
 
 def finding_solution(var_A, var_B, var_C, var_D, limite_min, limite_max):
     a = limite_min
@@ -29,16 +29,16 @@ def finding_solution(var_A, var_B, var_C, var_D, limite_min, limite_max):
         
     return "No tiene respuesta"
 
-def bolzano():
+def bolzano(A, B, C, D):
     print("Esta va a ser tu ecuación de tercer grado: Ax^2 + Bx + C + D = 0. Introduce los factores de tu ecuación")
     # A = float(input("A: "))
     # B = float(input("B: "))
     # C = float(input("C: "))
     # D = float(input("D: "))
-    A = float(1)
-    B = float(0)
-    C = float(-5)
-    D = float(0)
+    # A = float(1)
+    # B = float(0)
+    # C = float(-5)
+    # D = float(0)
 
     sol1_min = float(0.1)
     sol1_max = float(1000)
@@ -49,15 +49,7 @@ def bolzano():
     sol2 = finding_solution(A, B, C, D, sol2_min, sol2_max)
 
     return sol1, sol2
-
-            
-class TestBolzano(unittest.TestCase):
-    def test_run(self):
-        solution1, solution2 = bolzano()
-        print("la respuesta de x es: " + str(solution1) + " " + str(solution2))
-        self.assertEqual(solution1, round(math.sqrt(5), 3))
-
-        self.assertEqual(solution2, -1*round(math.sqrt(5), 3))
+    
 
 if __name__ == '__main__':
-    unittest.main()
+    bolzano(A, B, C, D)
