@@ -14,7 +14,6 @@ class Road:  # Creamos la clase Road
         self.distance = distance
 
 
-
 if __name__ == '__main__':  # Así ejecutamos el código 'Buena práctica'. "si el programa se llama desde la terminal, ejecuta"
     forfi = Car("Ford", 1000, 120)  # Llamamos al Objeto Car y la metemos en la variable forfi
     road_gasteiz = Road(100)  # La clase Road() será la variable road_gasteiz

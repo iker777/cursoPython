@@ -25,7 +25,7 @@ class Employee:  # Es una clase para crear el eMail a partir del nombre y el ape
 
 if __name__ == '__main__':    
     emp_1 = Employee('John', 'Smith')
-    emp_1.fullname = 'Gary Cooper'  # ERROR. Aunque parezca un atributo, no puedes modificarlo directamente gracias a @property
+    emp_1.fullname = 'Gary Cooper'  
 
     print(emp_1.first)  # > Jim
     print(emp_1.email)  # LLAMAS A LA FUNCIÓN IGUAL QUE A UN MÉTODO > Jim.Smith@email.com / El email cambia porque con el nuevo método coge los atributos actuales
