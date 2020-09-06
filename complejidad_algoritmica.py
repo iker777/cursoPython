@@ -1,4 +1,5 @@
 import time
+
 def factorial(n):
     respuesta = 1
 
