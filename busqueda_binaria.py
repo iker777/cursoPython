@@ -30,3 +30,5 @@ if __name__ == '__main__':
     encontrado, contador = busqueda_binaria(lista_random, objetivo_int)  # Función Búsqueda_lineal = 2x + 3
     print(lista_random)  # O(1)
     print(f'El elemento {objetivo_int} {"esta" if encontrado else "no esta"} en la lista. {"resuelto en" if encontrado else "Veces iterado"} {contador} ')  # O(x)
+
+    
