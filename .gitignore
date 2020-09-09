@@ -1,0 +1,4 @@
+#Ignorar carpeta del ambiente virtual venv
+venv/
+#Ignorar todos los archivos HTML
+*.html
