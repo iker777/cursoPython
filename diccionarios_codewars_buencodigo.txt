@@ -1,0 +1,16 @@
+def stem_and_leaf(data):
+    plot = {}
+    data = sorted(data)
+    for x in data:
+        if x//10 in plot:
+            plot[x//10].append(x%10)
+        else:
+            plot[x//10] = [x%10]
+    return plot
+    
+if __name__ == '__main__':
+    data = [17, 10, 70, 43, 56, 40, 50, 12, 9]
+    print(stem_and_leaf(data))
+    
+    
+    #Buen código para aprender diccionarios. Guárdalo!

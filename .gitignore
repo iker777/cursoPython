@@ -2,3 +2,7 @@
 venv/
 #Ignorar todos los archivos HTML
 *.html
+#Ignorar archivos .json
+*.json
+#Ignorar la carpeta .vscode/
+*.vscode/
